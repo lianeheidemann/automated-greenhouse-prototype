@@ -1,120 +1,115 @@
-# 🌱 Projeto de Irrigação com Monitoramento Automatizado  
+# 🌱 Automated Irrigation and Greenhouse Monitoring
 ![Arduino](https://img.shields.io/badge/Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white)
-### Grupo AMIP
 
-Protótipo de sistema de irrigação automatizada e monitoramento ambiental para estufas agrícolas desenvolvido com Arduino UNO. A solução integra sensores de temperatura, umidade do ar e umidade do solo, realizando a coleta de dados em tempo real, exibição em display LCD e transmissão via Bluetooth para dispositivos móveis.
+### AMIP Group
 
----
-
-# Projeto Acadêmico
-
-Projeto desenvolvido para estudos de automação, sistemas embarcados e monitoramento agrícola utilizando Arduino.
+An automated irrigation and environmental monitoring prototype for agricultural greenhouses, built with an Arduino UNO. The solution combines temperature, air-humidity, and soil-moisture sensors, collecting real-time data, displaying it on an LCD, and transmitting it to mobile devices over Bluetooth.
 
 ---
 
-## Objetivos do Projeto
+## Academic Project
 
-- Levar inovação tecnológica para a Ilha de Cutijuba
-- Auxiliar na produção agrícola da região
-- Automatizar processos de irrigação em estufas
-- Produzir mudas mais fortes e saudáveis
-- Permitir o cultivo de espécies menos resistentes ao clima local
+Developed to explore automation, embedded systems, and agricultural monitoring with Arduino.
 
 ---
 
-## Funcionalidades
+## Project Goals
 
-- Irrigação automatizada  
-- Monitoramento da temperatura ambiente  
-- Monitoramento da umidade do ar  
-- Monitoramento da umidade do solo  
-- Exibição dos dados em display LCD 16x2  
-- Envio de dados via Bluetooth  
-- Integração com o aplicativo Arduino Bluetooth Controller  
+- Introduce technological innovation to Cutijuba Island
+- Support agricultural production in the region
+- Automate greenhouse irrigation
+- Help produce stronger, healthier seedlings
+- Enable the cultivation of species that are less resistant to the local climate
 
 ---
 
-## Aplicativo Utilizado
+## Features
 
-Os dados também podem ser visualizados pelo aplicativo:
-
-🔗 [Arduino Bluetooth Controller](https://play.google.com/store/apps/details?id=com.appsvalley.bluetooth.arduinocontroller)
+- Automated irrigation
+- Ambient temperature monitoring
+- Air-humidity monitoring
+- Soil-moisture monitoring
+- Data display on a 16x2 LCD
+- Bluetooth data transmission
+- Integration with the Arduino Bluetooth Controller app
 
 ---
 
-## Componentes Utilizados
+## Mobile Application
 
-| Componente |
+Data can also be viewed through:
+
+[Arduino Bluetooth Controller](https://play.google.com/store/apps/details?id=com.appsvalley.bluetooth.arduinocontroller)
+
+---
+
+## Components
+
+| Component |
 |---|
 | Arduino UNO R3 |
-| Sensor de temp e hum do ar DHT11 |
-| Cooler 5V 30x30mm |
-| Bomba d'água 12V DC30A-1230 |
-| Sensor de Umidade do Solo |
-| Display LCD 16x2 |
-| Módulo Serial I2C para LCD |
-| Módulo Bluetooth HC-05 |
-| Interruptores On-Off Slide Switch |
-| Mangueira de irrigação (0,5m) |
-| Fonte 5V para Arduino |
-| Fonte 12V para bomba d’água |
+| DHT11 temperature and humidity sensor |
+| 5V 30x30 mm fan |
+| 12V DC30A-1230 water pump |
+| Soil-moisture sensor |
+| 16x2 LCD |
+| I2C serial module for LCD |
+| HC-05 Bluetooth module |
+| On-off slide switches |
+| 0.5 m irrigation hose |
+| 5V Arduino power supply |
+| 12V water-pump power supply |
 
 ---
 
-## Funcionamento do Sistema
+## How the System Works
 
-O sistema realiza continuamente:
+The system continuously:
 
-1. Leitura da temperatura ambiente
-2. Leitura da umidade do ar
-3. Leitura da umidade do solo
-4. Exibição das informações no display LCD
-5. Envio dos dados via Bluetooth para o celular
-
----
-
-## Foto do Projeto
-
-<img src="https://github.com/user-attachments/assets/79a7904a-b725-4893-8924-1a20300b37dc" width="70%"/>
+1. Reads the ambient temperature.
+2. Reads the air humidity.
+3. Reads the soil moisture.
+4. Displays the measurements on the LCD.
+5. Sends the data to a phone over Bluetooth.
 
 ---
 
-## Vídeos do Projeto
+## Project Photo
 
-🇧🇷 Português  
+<img src="https://github.com/user-attachments/assets/79a7904a-b725-4893-8924-1a20300b37dc" width="70%" alt="Automated greenhouse prototype"/>
+
+---
+
+## Project Videos
+
+**Portuguese**
+
 > https://github.com/lianeheidemann/ProjetoDeIrrigacaoMonitoramentoAutomatico_AMIP/assets/54177181/27c868d7-40d9-4d39-b8f9-d3db045b137a
 
-<details close>
-  <summary>🇺🇸 English</summary>
+<details>
+  <summary>English</summary>
 
 > https://github.com/lianeheidemann/ProjetoDeIrrigacaoMonitoramentoAutomatico_AMIP/assets/54177181/5dc2416f-5027-4611-a1f7-5dbb007b2bb0
 
 </details>
 
----
+<details>
+  <summary>YouTube links</summary>
 
-<details close>
-  <summary>Links do YouTube</summary>  
+**Portuguese:** [Watch on YouTube](https://youtu.be/CeOX5DaF4m8)
 
-**🇧🇷 Português**
-[Assistir no YouTube](https://youtu.be/CeOX5DaF4m8)
-
-**🇺🇸 English**
-[Watch on YouTube](https://youtu.be/XomKhprOvek)
+**English:** [Watch on YouTube](https://youtu.be/XomKhprOvek)
 
 </details>
 
 ---
 
-## Equipe do Projeto
+## Project Team
 
-| Nome | E-mail |
-|------|---------|
+| Name | Email |
+|------|-------|
 | **Liane Ferreira Heidemann** | liane22070222@aluno.cesupa.br |
 | **Luis Imhotep** | luis22070056@aluno.cesupa.br |
 | **Fabio Gabriel Areas** | fabio21070209@aluno.cesupa.br |
 | **Fellipe Santos** | fellipe20070001@aluno.cesupa.br |
 | **Luan Augusto** | luan22070212@aluno.cesupa.br |
-
-
-
