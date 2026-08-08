@@ -24,6 +24,8 @@ Developed by the AMIP group as an academic project applying embedded systems and
   - [Build and Upload](#build-and-upload)
 - [Known Limitations](#known-limitations)
 - [Mobile Client](#mobile-client)
+- [Project Photo](#project-photo)
+- [Project Videos](#project-videos)
 - [Repository Layout](#repository-layout)
 - [License](#license)
 - [Team](#team)
@@ -187,6 +189,36 @@ arduino-cli upload -p <PORT> --fqbn arduino:avr:uno .
 Telemetry can be viewed with any generic Bluetooth SPP terminal app. The project was validated against:
 
 [Arduino Bluetooth Controller](https://play.google.com/store/apps/details?id=com.appsvalley.bluetooth.arduinocontroller) — pair with the HC-05, connect, and switch to terminal/monitor mode to view the incoming telemetry line described above.
+
+---
+
+## Project Photo
+
+<img src="https://github.com/user-attachments/assets/79a7904a-b725-4893-8924-1a20300b37dc" width="70%" alt="Automated greenhouse prototype"/>
+
+---
+
+## Project Videos
+
+**Portuguese**
+
+> https://github.com/lianeheidemann/ProjetoDeIrrigacaoMonitoramentoAutomatico_AMIP/assets/54177181/27c868d7-40d9-4d39-b8f9-d3db045b137a
+
+<details>
+  <summary>English</summary>
+
+> https://github.com/lianeheidemann/ProjetoDeIrrigacaoMonitoramentoAutomatico_AMIP/assets/54177181/5dc2416f-5027-4611-a1f7-5dbb007b2bb0
+
+</details>
+
+<details>
+  <summary>YouTube links</summary>
+
+**Portuguese:** [Watch on YouTube](https://youtu.be/CeOX5DaF4m8)
+
+**English:** [Watch on YouTube](https://youtu.be/XomKhprOvek)
+
+</details>
 
 ---
 
