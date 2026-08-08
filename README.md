@@ -1,4 +1,4 @@
-# Automated Greenhouse Prototype
+# 🌱 Automated Greenhouse Prototype
 
 [![Platform](https://img.shields.io/badge/platform-Arduino%20UNO%20R3-00979D?style=flat-square&logo=arduino&logoColor=white)](https://www.arduino.cc/)
 [![Language](https://img.shields.io/badge/language-C%2B%2B%20(Arduino)-blue?style=flat-square)](https://www.arduino.cc/reference/en/)
