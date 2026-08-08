@@ -38,7 +38,7 @@ The prototype implements a closed monitoring loop for a small-scale greenhouse e
 
 1. **Acquisition** — a DHT11 sensor provides ambient temperature and relative air humidity; a resistive soil-moisture probe provides a normalized soil hydration reading via an analog input.
 2. **Local feedback** — readings are rendered on a 16x2 character LCD (I2C backpack) on a rotating basis.
-3. **Remote telemetry** — the same readings are serialized as a formatted string and transmitted over UART to an HC-05 Bluetooth module, which exposes them to any paired serial-terminal or Bluetooth-controller mobile app.
+3. **Remote telemetry** — the same readings are serialized as a formatted string and transmitted over UART to an HC-05 Bluetooth module, which exposes them to any paired Bluetooth serial-terminal mobile app.
 4. **Actuation** — a 12V DC water pump and a 5V ventilation fan provide the physical irrigation/cooling actuators for the enclosure (currently wired for manual/switch-based control in this prototype revision).
 
 The firmware runs a single-threaded, blocking loop (`loop()` in `main.ino`) with fixed `delay()`-based timing rather than an event-driven or interrupt-based scheduler — appropriate for the prototype's sampling cadence but a known constraint (see [Known Limitations](#known-limitations)).
@@ -154,7 +154,7 @@ Once per loop, a single line is written to `Serial` (and thus relayed by the HC-
 [ Umid do Ar: <humidity>% ]   [ Temp: <temperature>°C ]   [ Umid da Terra: <soil>% ]
 ```
 
-This is a human-readable, unstructured format intended for direct display in a generic serial/Bluetooth terminal app (e.g., Arduino Bluetooth Controller) rather than machine parsing. Consumers that need structured data should parse this line with a regex/split rather than relying on a stable schema, or the firmware should be extended to emit a delimited/JSON payload.
+This is a human-readable, unstructured format intended for direct display in a generic Bluetooth serial-terminal app rather than machine parsing. Consumers that need structured data should parse this line with a regex/split rather than relying on a stable schema, or the firmware should be extended to emit a delimited/JSON payload.
 
 ### Build and Upload
 
@@ -163,7 +163,7 @@ This is a human-readable, unstructured format intended for direct display in a g
 3. Select **Board:** Arduino UNO, and the correct **Port** for your USB connection.
 4. Disconnect or disable the HC-05 module before uploading (shared UART, see [Pin Mapping](#pin-mapping)).
 5. Upload the sketch.
-6. Pair the HC-05 with a mobile device (default pairing code is typically `1234` or `0000`) and open a serial/Bluetooth terminal app, or [Arduino Bluetooth Controller](https://play.google.com/store/apps/details?id=com.appsvalley.bluetooth.arduinocontroller), to view telemetry.
+6. Pair the HC-05 with a mobile device (default pairing code is typically `1234` or `0000`) and open any Bluetooth serial-terminal app to view telemetry (see [Mobile Client](#mobile-client)).
 
 Arduino CLI equivalent:
 
@@ -186,9 +186,11 @@ arduino-cli upload -p <PORT> --fqbn arduino:avr:uno .
 
 ## Mobile Client
 
-Telemetry can be viewed with any generic Bluetooth SPP terminal app. The project was validated against:
+Telemetry was displayed on a phone using a Bluetooth serial-terminal app: a black screen with a plant image in the background, overlaid with the incoming air temperature, air humidity, and soil moisture readings described in [Serial / Bluetooth Protocol](#serial--bluetooth-protocol). The specific app used has since been lost and could not be identified for this document; the screenshot below is the only remaining record.
 
-[Arduino Bluetooth Controller](https://play.google.com/store/apps/details?id=com.appsvalley.bluetooth.arduinocontroller) — pair with the HC-05, connect, and switch to terminal/monitor mode to view the incoming telemetry line described above.
+<img src="./assets/mobile.jpg" width="40%" alt="Mobile app displaying greenhouse sensor data"/>
+
+Any generic Bluetooth SPP terminal app that can display incoming serial text is compatible with this firmware's telemetry format.
 
 ---
 

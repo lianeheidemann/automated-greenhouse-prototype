@@ -31,15 +31,15 @@ Developed to explore automation, embedded systems, and agricultural monitoring w
 - Soil-moisture monitoring
 - Data display on a 16x2 LCD
 - Bluetooth data transmission
-- Integration with the Arduino Bluetooth Controller app
+- Data display on a mobile app over Bluetooth
 
 ---
 
 ## Mobile Application
 
-Data can also be viewed through:
+Data was also viewed on a phone through a Bluetooth serial-terminal app: a black screen with a plant image in the background, showing the air temperature, air humidity, and soil moisture readings sent by the Arduino. The exact app used has since been lost; the screenshot below is the only remaining record of it.
 
-[Arduino Bluetooth Controller](https://play.google.com/store/apps/details?id=com.appsvalley.bluetooth.arduinocontroller)
+<img src="./assets/mobile.jpg" width="40%" alt="Mobile app displaying greenhouse sensor data"/>
 
 ---
 
