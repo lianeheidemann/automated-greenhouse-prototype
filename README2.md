@@ -22,7 +22,6 @@ Developed by the AMIP group as an academic project applying embedded systems and
   - [Control Flow](#control-flow)
   - [Serial / Bluetooth Protocol](#serial--bluetooth-protocol)
   - [Build and Upload](#build-and-upload)
-- [Known Limitations](#known-limitations)
 - [Mobile Client](#mobile-client)
 - [Project Photo](#project-photo)
 - [Project Videos](#project-videos)
@@ -41,7 +40,7 @@ The prototype implements a closed monitoring loop for a small-scale greenhouse e
 3. **Remote telemetry** — the same readings are serialized as a formatted string and transmitted over UART to an HC-05 Bluetooth module, which exposes them to any paired Bluetooth serial-terminal mobile app.
 4. **Actuation** — a 12V DC water pump and a 5V ventilation fan provide the physical irrigation/cooling actuators for the enclosure (currently wired for manual/switch-based control in this prototype revision).
 
-The firmware runs a single-threaded, blocking loop (`loop()` in `main.ino`) with fixed `delay()`-based timing rather than an event-driven or interrupt-based scheduler — appropriate for the prototype's sampling cadence but a known constraint (see [Known Limitations](#known-limitations)).
+The firmware runs a single-threaded, blocking loop (`loop()` in `main.ino`) with fixed `delay()`-based timing rather than an event-driven or interrupt-based scheduler — appropriate for the prototype's sampling cadence.
 
 ---
 
@@ -174,23 +173,13 @@ arduino-cli upload -p <PORT> --fqbn arduino:avr:uno .
 
 ---
 
-## Known Limitations
-
-- **Blocking timing model:** all pacing is done with `delay()`, so the loop cannot service other events (e.g., a button press or a fault condition) while waiting — a `millis()`-based non-blocking scheduler would allow concurrent tasks.
-- **No structured telemetry format:** the Bluetooth payload is a formatted display string, not a stable, parseable schema (see [Serial / Bluetooth Protocol](#serial--bluetooth-protocol)).
-- **No closed-loop actuation:** the pump and fan are switch-driven in this revision; sensor readings are not yet used to automatically trigger irrigation or ventilation.
-- **DHT11 read frequency:** the DHT11 has a minimum ~1s sampling interval; it is currently read multiple times per cycle (`temperatura()`, `umidadeDoAr()`, `bluetoohMensagem()`), which is within spec given the cycle's ~11s duration but is redundant and could be consolidated into a single read per cycle.
-- **Shared UART contention:** USB programming and Bluetooth telemetry cannot be used simultaneously without disconnecting the HC-05, since both use the same hardware serial port.
-
----
-
 ## Mobile Client
 
-Telemetry was displayed on a phone using a Bluetooth serial-terminal app: a black screen with a plant image in the background, overlaid with the incoming air temperature, air humidity, and soil moisture readings described in [Serial / Bluetooth Protocol](#serial--bluetooth-protocol). The link was receive-only from the app's perspective — it connected to the HC-05 and rendered the incoming telemetry, with no commands sent back to the Arduino. The specific app used has since been lost and could not be identified for this document; the screenshot below is the only remaining record.
+The mobile side of the system is a passive telemetry viewer: it establishes a Bluetooth SPP connection to the HC-05 and renders the incoming serial stream, with no commands sent back to the Arduino. Any application capable of displaying incoming Bluetooth serial text is compatible with the firmware's [telemetry format](#serial--bluetooth-protocol).
+
+The client used during development and demonstration presented the readings — air temperature, air humidity, and soil moisture — over a plant-themed background, as shown below. The specific application is no longer available; this screenshot is the only remaining record of it.
 
 <img src="./assets/mobile.jpg" width="50%" alt="Mobile app displaying greenhouse sensor data"/>
-
-Any generic Bluetooth SPP terminal app that can display incoming serial text is compatible with this firmware's telemetry format.
 
 ---
 
