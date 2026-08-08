@@ -39,7 +39,7 @@ Developed to explore automation, embedded systems, and agricultural monitoring w
 
 Data was also viewed on a phone through a Bluetooth serial-terminal app
 
-<img src="./assets/mobile.jpg" width="40%" alt="Mobile app displaying greenhouse sensor data"/>
+<img src="./assets/mobile.jpg" width="50%" alt="Mobile app displaying greenhouse sensor data"/>
 
 ---
 
