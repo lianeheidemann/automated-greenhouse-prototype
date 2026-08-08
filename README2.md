@@ -186,7 +186,7 @@ arduino-cli upload -p <PORT> --fqbn arduino:avr:uno .
 
 ## Mobile Client
 
-Telemetry was displayed on a phone using a Bluetooth serial-terminal app: a black screen with a plant image in the background, overlaid with the incoming air temperature, air humidity, and soil moisture readings described in [Serial / Bluetooth Protocol](#serial--bluetooth-protocol). The specific app used has since been lost and could not be identified for this document; the screenshot below is the only remaining record.
+Telemetry was displayed on a phone using a Bluetooth serial-terminal app: a black screen with a plant image in the background, overlaid with the incoming air temperature, air humidity, and soil moisture readings described in [Serial / Bluetooth Protocol](#serial--bluetooth-protocol). The link was receive-only from the app's perspective — it connected to the HC-05 and rendered the incoming telemetry, with no commands sent back to the Arduino. The specific app used has since been lost and could not be identified for this document; the screenshot below is the only remaining record.
 
 <img src="./assets/mobile.jpg" width="40%" alt="Mobile app displaying greenhouse sensor data"/>
 
