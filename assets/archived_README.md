@@ -37,7 +37,7 @@ Developed to explore automation, embedded systems, and agricultural monitoring w
 
 ## Mobile Application
 
-Data was also viewed on a phone through a Bluetooth serial-terminal app: a black screen with a plant image in the background, showing the air temperature, air humidity, and soil moisture readings sent by the Arduino. The app only connected to the HC-05 and displayed the incoming readings — it did not send any commands back to the Arduino. The exact app used has since been lost; the screenshot below is the only remaining record of it.
+Data was also viewed on a phone through a Bluetooth serial-terminal app
 
 <img src="./assets/mobile.jpg" width="40%" alt="Mobile app displaying greenhouse sensor data"/>
 
