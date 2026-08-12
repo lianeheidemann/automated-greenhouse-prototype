@@ -61,13 +61,13 @@ The phone side is a passive viewer: it connects to the HC-05 over Bluetooth SPP 
 
 The app used during development showed air temperature, air humidity, and soil moisture over a plant-themed background, as in the screenshot below. That specific app is no longer available; this image is the only remaining record of it.
 
-<img src="./assets/mobile.jpg" width="50%" alt="Mobile app displaying greenhouse sensor data"/>
+<img width="50%" src="prototype/prototype3.png"/>
 
 ---
 
 ## Project Photo
 
-<img src="https://github.com/user-attachments/assets/79a7904a-b725-4893-8924-1a20300b37dc" width="50%" alt="Automated greenhouse prototype"/>
+<img width="80%" src="prototype/prototype.png"/>
 
 ---
 
@@ -76,7 +76,7 @@ The app used during development showed air temperature, air humidity, and soil m
 https://github.com/lianeheidemann/ProjetoDeIrrigacaoMonitoramentoAutomatico_AMIP/assets/54177181/5dc2416f-5027-4611-a1f7-5dbb007b2bb0
 
 <details>
-  <summary>YouTube links</summary>
+  <summary>YouTube</summary>
 
 **Portuguese:** [Watch on YouTube](https://youtu.be/CeOX5DaF4m8)
 **English:** [Watch on YouTube](https://youtu.be/XomKhprOvek)
