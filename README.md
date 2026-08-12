@@ -135,3 +135,5 @@ Distributed under the MIT License. See [LICENSE](./LICENSE) for the full text.
 | Fabio Gabriel Areas | fabio21070209@aluno.cesupa.br |
 | Fellipe Santos | fellipe20070001@aluno.cesupa.br |
 | Luan Augusto | luan22070212@aluno.cesupa.br |
+
+---
