@@ -49,34 +49,21 @@ This prototype automates **sensing and reporting only**. Temperature, air humidi
 
 ## System Architecture
 
-```
- ┌──────────────┐    ┌──────────────┐    ┌──────────────┐
- │  DHT11        │    │ Soil moisture│    │              │
- │  (temp + air  │    │ sensor       │    │  Arduino     │
- │  humidity)    │    │ (analog)     │    │  UNO R3      │
- └──────┬───────┘    └──────┬───────┘    │              │
-        │  D2 (digital)     │  A3 (analog)│              │
-        └───────────────────┴────────────►│  main.ino    │
-                                            │  loop()      │
-                                            └──────┬───┬───┘
-                                                    │   │
-                                   I2C (A4/A5)      │   │  Hardware UART
-                                   ┌────────────────┘   └────────────────┐
-                                   ▼                                      ▼
-                          ┌────────────────┐                   ┌──────────────────┐
-                          │ 16x2 LCD        │                   │ HC-05 Bluetooth   │
-                          │ (I2C, 0x27)     │                   │ module (9600 baud)│
-                          └────────────────┘                   └────────┬─────────┘
-                                                                          │ SPP
-                                                                          ▼
-                                                                 ┌──────────────────┐
-                                                                 │ Mobile app        │
-                                                                 │ (passive display) │
-                                                                 └──────────────────┘
+```mermaid
+flowchart LR
+    DHT["DHT11<br/>temperature + air humidity"] -->|"D2, digital"| ARD["Arduino UNO R3<br/>main.ino loop()"]
+    SOIL["Soil moisture sensor<br/>analog"] -->|"A3, analog"| ARD
+    ARD -->|"I2C, A4/A5, addr 0x27"| LCD["16x2 LCD"]
+    ARD -->|"Hardware UART, 9600 baud"| HC["HC-05<br/>Bluetooth module"]
+    HC -->|"Bluetooth SPP"| PHONE["Mobile app<br/>passive display"]
 
- Fan and water pump are wired to their own 5V/12V rails via manual
- slide switches — no signal path to the Arduino's GPIO.
+    subgraph MANUAL["Manual actuation — no GPIO link to the Arduino"]
+        FAN["5V Fan"]
+        PUMP["12V Water Pump"]
+    end
 ```
+
+Fan and water pump are wired to their own 5V/12V rails via manual slide switches — there is no signal path from the Arduino to either.
 
 ---
 
