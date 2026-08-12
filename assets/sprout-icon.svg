@@ -1,22 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 300" role="img" aria-labelledby="title desc">
-  <title id="title">Sprout</title>
-  <desc id="desc">A two-leaf sprout that adapts its color to the device theme.</desc>
-  <style>
-    .sprout {
-      fill: none;
-      stroke: #1a7f37;
-      stroke-width: 20;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-
-    @media (prefers-color-scheme: dark) {
-      .sprout {
-        stroke: #56d364;
-      }
-    }
-  </style>
-  <path class="sprout" d="M128 286V132"/>
-  <path class="sprout" d="M128 132C68 132 16 91 16 16c67 0 112 49 112 116Z"/>
-  <path class="sprout" d="M128 177c0-68 48-116 112-116 0 69-43 116-112 116Z"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="320" viewBox="0 0 24 24" fill="none" stroke="#5cb85c" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 21V10"></path>
+  <path d="M12 10c0-3.5-2.5-6-7-6 0 4.5 2.5 7 7 7"></path>
+  <path d="M12 13c0-3.5 2.5-6 7-6 0 4.5-2.5 7-7 7"></path>
 </svg>
