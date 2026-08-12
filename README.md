@@ -1,16 +1,27 @@
-# <img src="./assets/sprout-icon.svg" width="36" height="42" alt="Sprout icon"> Automated Greenhouse Prototype
+<h1 align="center">
+  <img src="./assets/sprout-icon.svg" width="36" height="42" alt="Sprout icon">
+  Automated Greenhouse Prototype
+</h1>
 
-[![Platform](https://img.shields.io/badge/platform-Arduino%20UNO%20R3-00979D?style=flat-square&logo=arduino&logoColor=white)](https://www.arduino.cc/)
-[![Language](https://img.shields.io/badge/language-C%2B%2B%20(Arduino)-blue?style=flat-square)](https://www.arduino.cc/reference/en/)
-[![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](./LICENSE)
+<p align="center">
+  <a href="https://www.arduino.cc/"><img src="https://img.shields.io/badge/platform-Arduino%20UNO%20R3-00979D?style=flat-square&amp;logo=arduino&amp;logoColor=white" alt="Platform: Arduino UNO R3"></a>
+  <a href="https://www.arduino.cc/reference/en/"><img src="https://img.shields.io/badge/language-C%2B%2B%20(Arduino)-blue?style=flat-square" alt="Language: C++ (Arduino)"></a>
+  <a href="./LICENSE"><img src="https://img.shields.io/badge/license-MIT-green?style=flat-square" alt="License: MIT"></a>
+</p>
 
-Firmware and hardware design for an embedded environmental-monitoring prototype built on an Arduino UNO R3. The system reads ambient temperature, air humidity, and soil moisture, displays the readings on an LCD, and transmits them over Bluetooth to a mobile device.
+<p align="center">
+  Firmware and hardware design for an embedded environmental-monitoring prototype built on an Arduino UNO R3. The system reads ambient temperature, air humidity, and soil moisture, displays the readings on an LCD, and transmits them over Bluetooth to a mobile device.
+</p>
 
-Developed by the AMIP group as an academic project applying embedded systems and automation to agricultural greenhouse management on Cutijuba Island.
+<p align="center">
+  Developed by the AMIP group as an academic project applying embedded systems and automation to agricultural greenhouse management on Cutijuba Island.
+</p>
 
 ---
 
-<img width="80%" src="prototype/prototype.png"/>
+<p align="center">
+  <img width="80%" src="prototype/prototype.png" alt="Automated greenhouse prototype">
+</p>
 
 ---
 
