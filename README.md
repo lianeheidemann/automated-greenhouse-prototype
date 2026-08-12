@@ -10,6 +10,10 @@ Developed by the AMIP group as an academic project applying embedded systems and
 
 ---
 
+<img width="80%" src="prototype/prototype.png"/>
+
+---
+
 ## Hardware
 
 | Component | Role |
@@ -62,12 +66,6 @@ The phone side is a passive viewer: it connects to the HC-05 over Bluetooth SPP 
 The app used during development showed air temperature, air humidity, and soil moisture over a plant-themed background, as in the screenshot below. That specific app is no longer available; this image is the only remaining record of it.
 
 <img width="50%" src="prototype/prototype3.png"/>
-
----
-
-## Project Photo
-
-<img width="80%" src="prototype/prototype.png"/>
 
 ---
 
