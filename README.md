@@ -82,14 +82,12 @@ The app used during development showed air temperature, air humidity, and soil m
 
 ## Project Video
 
-https://github.com/lianeheidemann/ProjetoDeIrrigacaoMonitoramentoAutomatico_AMIP/assets/54177181/5dc2416f-5027-4611-a1f7-5dbb007b2bb0
+<img src="./assets/video.gif" width="60%">
 
 <details>
   <summary>YouTube</summary>
-
-**Portuguese:** [Watch on YouTube](https://youtu.be/CeOX5DaF4m8)
-**English:** [Watch on YouTube](https://youtu.be/XomKhprOvek)
-
+  **Portuguese:** [Watch on YouTube](https://youtu.be/CeOX5DaF4m8)
+  **English:** [Watch on YouTube](https://youtu.be/XomKhprOvek)
 </details>
 
 ---
