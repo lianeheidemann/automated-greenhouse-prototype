@@ -15,7 +15,7 @@
 </p>
 
 <p align="center">
-  Developed by the AMIP group as an academic project applying embedded systems and automation concepts to greenhouse management on Cutijuba Island.
+  Developed by the AMIP group as an academic project applying embedded systems and automation concepts to greenhouse management on Cutijuba Island. Automation covers <strong>sensing and reporting only</strong> — irrigation and ventilation stay on manual switches, not closed-loop control.
 </p>
 
 ---
@@ -23,27 +23,6 @@
 <p align="center">
   <img width="80%" src="prototype/prototype.png" alt="Automated greenhouse prototype">
 </p>
-
----
-
-## Table of Contents
-
-- [Scope](#scope)
-- [System Architecture](#system-architecture)
-- [Hardware](#hardware)
-- [Firmware](#firmware)
-- [Known Issues](#known-issues)
-- [Mobile Client](#mobile-client)
-- [Repository Structure](#repository-structure)
-- [Project Video](#project-video)
-- [License](#license)
-- [Team](#team)
-
----
-
-## Scope
-
-This prototype automates **sensing and reporting only**. Temperature, air humidity, and soil moisture are read continuously and pushed to a display and a Bluetooth link without manual intervention. **Irrigation and ventilation are not closed-loop controlled** — the fan and water pump are wired to independent power rails behind manual on/off slide switches, and the firmware never drives them. "Automated" in the project name refers to data collection, not actuation.
 
 ---
 
@@ -115,15 +94,7 @@ This is a human-readable line intended for a Bluetooth serial-terminal app, not 
 
 ## Known Issues
 
-Observed during a source read of `main.ino` on the current `main` branch:
-
-1. **Compile-breaking typo.** `display()` contains `lcd.print(mensag / em1);` — `mensag` and `em1` are not declared anywhere in the sketch; this reads as a corrupted reference to `mensagem1` and will fail to compile as written.
-2. **Redundant sensor reads.** `DHT.read(DHT11_PIN)` is called separately inside `temperatura()`, `umidadeDoAr()`, and `bluetoohMensagem()` — up to three reads per cycle — even though the DHT11 only supports roughly one reliable sample per second. This adds latency without improving accuracy.
-3. **Shared global state.** Readings are written to module-level variables (`x1`, `x2`, `x3`, `mensagem1`, `mensagem2`) and read back by other functions instead of being passed as parameters, making the data flow implicit and order-dependent.
-4. **Fully blocking control flow.** The reliance on `delay()` (see [Cycle timing](#firmware)) means the sketch cannot respond to anything — a button, an incoming Bluetooth byte, a threshold breach — while a display hold or transmit pause is in progress.
-5. **No actuation loop.** As noted in [Scope](#scope), the fan and pump are switched manually; there is no sensor-driven control logic in the firmware despite the "automated" naming.
-
-None of these block the prototype from demonstrating its core sensing/reporting use case, but they are worth addressing before treating this as production firmware.
+`main.ino`'s `display()` function contains `lcd.print(mensag / em1);` — `mensag` and `em1` are undeclared, so this line reads as a corrupted reference to `mensagem1` and won't compile as written. The loop is also fully `delay()`-based (~11 s/cycle), so nothing else can run while a display hold or transmit pause is in progress.
 
 ---
 
@@ -134,20 +105,6 @@ The phone side is a passive viewer: it connects to the HC-05 over Bluetooth SPP 
 The app used during development showed air temperature, air humidity, and soil moisture over a plant-themed background, as in the screenshot below. That specific app is no longer available; this image is the only remaining record of it.
 
 <img width="50%" src="prototype/prototype3.png"/>
-
----
-
-## Repository Structure
-
-```
-.
-├── LICENSE
-├── README.md              # original project README
-├── README_new.md          # this document
-├── main.ino               # Arduino firmware (sensing, LCD, Bluetooth transmit)
-├── assets/                 # icons, social previews, project video
-└── prototype/              # build photos used in documentation
-```
 
 ---
 
