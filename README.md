@@ -5,7 +5,7 @@
 
 <p align="center">
   <a href="https://www.arduino.cc/"><img src="https://img.shields.io/badge/platform-Arduino%20UNO%20R3-00979D?style=flat-square&logo=arduino&logoColor=white" alt="Platform: Arduino UNO R3"></a>
-  <a href="https://www.arduino.cc/reference/en/"><img src="https://img.shields.io/badge/language-C%2B%2B%20(Arduino)-blue?style=flat-square" alt="Language: C++ (Arduino)"></a>
+  <a href="https://www.arduino.cc/reference/en/">
   <a href="#"><img src="https://img.shields.io/badge/status-academic%20prototype-orange?style=flat-square" alt="Status: academic prototype"></a>
   <a href="./LICENSE"><img src="https://img.shields.io/badge/license-MIT-green?style=flat-square" alt="License: MIT"></a>
 </p>
