@@ -76,7 +76,7 @@ The phone side is a passive viewer: it connects to the HC-05 over Bluetooth SPP 
 
 The app used during development showed air temperature, air humidity, and soil moisture over a plant-themed background, as in the screenshot below. That specific app is no longer available; this image is the only remaining record of it.
 
-<img width="50%" src="prototype/prototype3.png"/>
+<img width="50%" src="prototype/prototype2.png"/>
 
 ---
 

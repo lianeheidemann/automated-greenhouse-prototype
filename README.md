@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="./assets/sprout-icon.svg" width="36" height="42" alt="Sprout icon">
+  <img src="./assets/icon/sprout-icon.svg" width="36" height="42" alt="Sprout icon">
   Automated Greenhouse Prototype
 </h1>
 
@@ -21,7 +21,7 @@
 ---
 
 <p align="center">
-  <img width="80%" src="prototype/prototype.png" alt="Automated greenhouse prototype">
+  <img width="70%" src="assets/prototype/prototype.png" alt="Automated greenhouse prototype">
 </p>
 
 ---
@@ -104,13 +104,13 @@ The phone side is a passive viewer: it connects to the HC-05 over Bluetooth SPP 
 
 The app used during development showed air temperature, air humidity, and soil moisture over a plant-themed background, as in the screenshot below. That specific app is no longer available; this image is the only remaining record of it.
 
-<img width="35%" src="prototype/prototype3.png"/>
+<img width="35%" src="assets/prototype/prototype2.png"/>
 
 ---
 
 ## Project Video
 
-<img src="./assets/video.gif" width="60%">
+<img src="./assets/prototype/video.gif" width="60%">
 
 <details>
   <summary>YouTube</summary>
