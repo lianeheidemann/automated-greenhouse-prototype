@@ -113,7 +113,8 @@ The app used during development showed air temperature, air humidity, and soil m
 <img src="assets/prototype/video_melhor_qualidade-1.webp" width="80%">
 
 <details>
-  <summary>YouTube</summary>
+  <summary>YouTube</summary><br>
+  
   <p><strong>Portuguese:</strong> <a href="https://youtu.be/CeOX5DaF4m8">Watch on YouTube</a></p>
   <p><strong>English:</strong> <a href="https://youtu.be/XomKhprOvek">Watch on YouTube</a></p>
 </details>
