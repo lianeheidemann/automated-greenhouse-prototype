@@ -110,7 +110,7 @@ The app used during development showed air temperature, air humidity, and soil m
 
 ## Project Video
 
-<img src="./assets/prototype/video.gif" width="60%">
+<img src="assets/prototype/video_melhor_qualidade-1.webp" width="80%">
 
 <details>
   <summary>YouTube</summary>
