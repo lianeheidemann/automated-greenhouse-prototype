@@ -8,7 +8,8 @@
   <a href="https://www.arduino.cc/reference/en/">
   <a href="#"><img src="https://img.shields.io/badge/status-academic%20prototype-orange?style=flat-square" alt="Status: academic prototype"></a>
   <a href="./LICENSE"><img src="https://img.shields.io/badge/license-MIT-green?style=flat-square" alt="License: MIT"></a>
-</p>
+  <br><a href="https://github.com/lianeheidemann/automated-greenhouse-prototype"><img src="https://camo.githubusercontent.com/62ae756a8f14e82c8c2053eb478e5643f2dddefeeaf29560c8df90743cd10e38/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f50524f4a4543542d434f4d504c455445442d3035393636393f7374796c653d666f722d7468652d6261646765"></a>
+  </p>
 
 <p align="center">
   Embedded environmental-monitoring prototype built on an Arduino UNO R3. The system samples ambient temperature, air humidity, and soil moisture, shows the readings on a local LCD, and streams them over Bluetooth to a paired mobile device.
